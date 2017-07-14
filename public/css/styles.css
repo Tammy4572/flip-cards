@@ -1,0 +1,190 @@
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+* {
+    box-sizing:  border-box
+}
+body {
+    background: url('/img/bg.png');
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    text-align: left;
+    text-decoration: none;
+}
+p {
+    margin: 5px;
+}
+h1 {
+    margin: auto;
+    width: 70%;
+    color: #2B6170;
+    font-family: "Bree Serif";
+    text-align: center;
+}
+.center-text {
+    text-align: center;
+    font-size: 22px;
+    font-style: italic;
+    color: #2B6170;
+}
+.login-body body{
+    background: url('/img/bg.png');
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    text-align: left;
+    text-decoration: none;
+    height: 500px;
+}
+.login-wrapper {
+    width: 400px;
+    height: 500px;
+    margin: 60px auto;
+}
+.logging-form {
+      width: 400px;
+      height: 250px;
+      margin: 0px auto;
+      background: #f3f3f3;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.logging-form .inputs {
+    width: 300px;
+    padding: 5px 15px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #9d9e9e;
+    text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+}
+.logging-form .inputs:hover {
+    background: #dfe9ec;
+    color: #414848;
+}
+.logging-form .inputs:focus {
+    background: #dfe9ec;
+    color: #414848;
+}
+.form-wrapper-center {
+    display: block;
+    justify-content: center;
+    margin: 0px 30px;
+}
+.form-wrapper-left {
+    display: flex;
+    align-content: flex-end;
+    padding-left: 10px;
+}
+.form-footer {
+    display: block;
+    float: right;
+    margin-right: 35px;
+    margin-top: 30px;
+}
+.form-footer .button {
+    display: flex;
+    align-self: right;
+    padding: 20px 20px;
+    font-family: 'Bree Serif', serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0px 1px 0 rgba(0,0,0,0.25);
+    background: #56c2e1;
+    border: 1px solid #46b3d3;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+}
+.form-footer .button:hover {
+    background: #3f9db8;
+    border: 1px solid rgba(256,256,256,0.75);
+
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+.form-footer .button:focus {
+    position:relative;
+    bottom: -1px;
+    background: #56c2e1;
+    box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+}
+
+
+
+
+
+
+.wrapper {
+    margin-top: 200px;
+}
+
+.inputs {
+    all: unset;
+    margin-top: 20px;
+    border: 2px solid gray;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 5px;
+}
+.buttons {
+    all: unset;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.vertical-text {
+    padding-top: 10px;
+    height: 30px;
+}
+.flip-container {
+	perspective: 1000px;
+}
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+    margin-bottom: 10px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+    text-align: center;
+    line-height: 10em;
+    font-size: 45px;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+    background-color: palevioletred;
+    color: royalblue
+
+}
+
+.back {
+	transform: rotateY(180deg);
+    background-color: royalblue;
+    color: palevioletred;
+}

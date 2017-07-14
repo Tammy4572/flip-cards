@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flip Card Game</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
      <div class='form-wrapper-left'>
         <form method="POST" action="/api/logout">
-            <button class="buttons" type="submit">Logout</button>
+            <button class="button click-btn" type="submit">Logout</button>
         </form>
     </div>
     <p>{{errMessage}}</p>
     <div class='form-wrapper-center'>
         <form method="POST" action="/api/decks">
-            <input class="inputs" type="text" name="name" placeholder="New Deck Name:">
-            <button class="buttons" type="submit">Add</button>
+            <input class="inputs" type="text" name="name" placeholder="New Deck:">
+            <button class="button click-btn" type="submit">Add</button>
         </form>
     </div>
 
     {{#data}}
     <div class='form-wrapper-center'>
-    <p class="center-text-large">{{name}}</p>
+    <p class="center-text">{{name}}</p>
         <form method="GET" action="/api/decks/{{id}}/start">
-            <button class="buttons" type="submit">Start Quiz</button>
+            <button class="button click-btn" type="submit">Start Quiz</button>
         </form>
         <form method="GET" action="/api/decks/{{id}}">
-            <button class="buttons" type="submit">Manage Deck</button>
+            <button class="button click-btn" type="submit">Manage Deck</button>
         </form>
     </div>
     {{/data}}

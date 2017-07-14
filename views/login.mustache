@@ -4,21 +4,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flip Card Game</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body class='wrapper'>
-    <p class='center center-text-large'>LOGIN</p>
-    <p class='center center-text-large'>{{message}}</p>
-    <form  method="POST" action="/api/login">
-        <div class='form-wrapper-center'>
-            <input class='inputs' type="text" name="email" placeholder="Email:">
-            <input class='inputs' type="password" name="password" placeholder="Password:">
-        </div>
-        <div class='form-wrapper-center'>
-        <button class='buttons' type="submit">Login</button>
-        </div>
-    </form>
-
+<body class='body-container'>
+    <div class="login-wrapper"> 
+        <h1>LOG IN</h1>
+        <p class='center-text'>{{message}}</p>
+        <form  class="logging-form" method="POST" action="/api/login">
+            <div class='form-wrapper-center'>
+                <input name="email" type="text" class="inputs" placeholder="Email:" />
+                <input name="password" type="text" class="inputs" placeholder="Password: " />
+            </div>
+            <div class='form-footer'>
+                <input class="button click-btn" type="submit" name="submit" value="Login"/>
+            </div>
+        </form>
+    </div>
 </body>
-
 </html>

@@ -1,7 +1,6 @@
 {
   "name": "flipcards",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +11,24 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-session": "^1.15.3",
-    "file-system": "^2.2.2"
-  }
+    "file-system": "^2.2.2",
+    "mustache-express": "^1.2.5",
+    "crypto": "^0.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tammy4572/flip-cards.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tammy4572/flip-cards/issues"
+  },
+  "homepage": "https://github.com/Tammy4572/flip-cards#readme",
+  "description": ""
 }
