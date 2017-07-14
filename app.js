@@ -5,8 +5,8 @@ const crypto = require('crypto');
 const mustacheExpress = require('mustache-express');
 const data = require('./data.json');
 const session = require('express-session');
-const usersrouter = require('./routes/user');
-const flipcardRouter = require('./routes/flipcard');
+const users = require('./routes/user');
+const flipcard = require('./routes/flipcard');
 
 const application = express();
 
@@ -23,8 +23,8 @@ application.use(express.static(__dirname + '/public'));
 
 application.use(bodyParser.urlencoded());
 
-application.use(usersrouter);
-application.use(flipcardRouter);
+application.use(users);
+application.use(flipcard);
 
 application.listen(3000);
 
