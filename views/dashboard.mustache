@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+    <div class="wrapper">
      <div class='form-wrapper-left'>
         <form method="POST" action="/api/logout">
-            <button class="button click-btn" type="submit">Logout</button>
+            <button class="button" type="submit">Logout</button>
         </form>
     </div>
     <p>{{errMessage}}</p>
     <div class='form-wrapper-center'>
         <form method="POST" action="/api/decks">
             <input class="inputs" type="text" name="name" placeholder="New Deck:">
-            <button class="button click-btn" type="submit">Add</button>
+            <button class="button" type="submit">Add</button>
         </form>
     </div>
 
@@ -25,12 +26,13 @@
     <div class='form-wrapper-center'>
     <p class="center-text">{{name}}</p>
         <form method="GET" action="/api/decks/{{id}}/start">
-            <button class="button click-btn" type="submit">Start</button>
+            <button class="button" type="submit">Start</button>
         </form>
         <form method="GET" action="/api/decks/{{id}}">
-            <button class="button click-btn" type="submit">Manage</button>
+            <button class="button" type="submit">Manage</button>
         </form>
     </div>
     {{/data}}
+    </div>
 </body>
 </html>
