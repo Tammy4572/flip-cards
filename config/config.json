@@ -2,21 +2,21 @@
   "development": {
     "username": "tammycastro",
     "password": null,
-    "database": "flipcards",
+    "database": "users",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "flipcards",
+    "username": "tammycastro",
     "password": null,
-    "database": "decks",
+    "database": "users",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "root",
+    "username": "tammycastro",
     "password": null,
-    "database": "flipcards",
+    "database": "users",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

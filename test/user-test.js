@@ -1,15 +1,18 @@
 const assert = require('chai').assert;
 const app = require('../app');
 
-describe('App', function(){
-    it('app should return successful', function(done){
-        request(app)
-        .post('/api/signup')
-        .send({email: 'test@test', message: 'Success'})
-        .expect(200)
-        .expect(response => {
-            assert.deepEqual(reqsponse.body, { email: 'test@test', password: 'test'})
-        })
-        .end(done);
-    })
+describe('Users:models', function(){
+    describe('#hashPassword()', function(){
+        it('should return a hashed password asynchronously', function(done) {
+            var password = 'smellycatfriend';
+
+            User.hashPassword(password, function(err, passwordHash){
+                //Confirm error does not exist
+                should.not.exist(err);
+                //Confirm the passwordHash is notNull
+                should.exist(passwordHash);
+                done()
+            });
+        });
+    });
 });
