@@ -31,7 +31,7 @@ router.post('/api/decks', (request, response) => {
     } else {
         return response.status(400).json({ message: "Incomplete Data "});
     }
-});
+});``
 
 router.post('/api/decks/:id', (request, response) => {
     var deckIndex = data.decks.findIndex(q => q.id === parseInt(request.params.id));
@@ -43,9 +43,9 @@ router.post('/api/decks/:id', (request, response) => {
             answer: request.body.answer
         };
         data.decks[deckIndex].cards.push(newCard);
-        var itemsJSON = JSON.stringify(date);
+        var itemsJSON = JSON.stringify(data);
         fs.writeFileSync('data.json', itemsJSON);
-        var currentDect = {
+        var currentDeck = {
             data: deck
         };
         return response.render('deck', currentDeck);

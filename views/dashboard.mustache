@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <div class="wrapper">
-     <div class='form-wrapper-left'>
-        <form method="POST" action="/api/logout">
+    <div class="form-wrapper">
+     <div class="form-wrapper-right">
+        <form class="logout-btn" method="POST" action="/api/logout">
             <button class="button" type="submit">Logout</button>
         </form>
     </div>
     <p>{{errMessage}}</p>
-    <div class='form-wrapper-center'>
-        <form method="POST" action="/api/decks">
+    <div class="form-wrapper-header">
+        <form class="form-header" method="POST" action="/api/decks">
             <input class="inputs" type="text" name="name" placeholder="New Deck:">
             <button class="button" type="submit">Add</button>
         </form>
     </div>
 
     {{#data}}
-    <div class='form-wrapper-center'>
+    <div class="form-wrapper-center">
     <p class="center-text">{{name}}</p>
         <form method="GET" action="/api/decks/{{id}}/start">
             <button class="button" type="submit">Start</button>

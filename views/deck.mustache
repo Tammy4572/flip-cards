@@ -4,35 +4,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flip Card Game</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
-    <div class="form-wrapper-left">
+    <div class="form-wrapper-right">
         <a class="buttons vertical-center-text" href="/api/decks">Dashboard</a>
         <form method="POST" action="/api/logout">
-            <button class="buttons" type="submit">Logout</button>
+            <button class="button" type="submit">Logout</button>
         </form>
     </div>
     <p class="center-text-large">{{data.name}}</p>
 
-    <div class='form-wrapper-center'>
+    <div class="form-wrapper-center">
         <form method="POST" action="/api/decks/{{data.id}}">
             <input class="inputs" type="text" name="question" placeholder="Question">
             <input class="inputs" type="text" name="answer" placeholder="Answer">
     </div>
-    <div class='form-wrapper-center'>
+    <div class="form-wrapper-center">
         <button class="buttons" type="submit">Submit New Card</button>
         </form>
     </div>
 
     {{#data.cards}}
-    <div class='form-wrapper-center'>
+    <div class="form-wrapper-center">
         <form method="POST" action="/api/decks/{{data.id}}/update/{{cardId}}">
             <input class="inputs" type="text" name="question" value="{{question}}">
             <input class="inputs" type="text" name="answer" value="{{answer}}">
     </div>
-    <div class='form-wrapper-center'>
+    <div class="form-wrapper-center">
         <button class="buttons" type="submit">Update Card</button>
         </form>
     
