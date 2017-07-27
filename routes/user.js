@@ -21,7 +21,7 @@ router.post('/api/signup', (request, response) => {
     var user = data.users.find(user => { return user.email === request.body.email });
     if (user) {
         var model = {
-            message: "That email is already registered. Log in to continue."
+            message: "That email is already registered. Please choose another email address to create a new account or log in to current account to continue."
         }
         return response.render('login', model);
     }
@@ -47,7 +47,7 @@ router.post('/api/signup', (request, response) => {
             return response.status(400).json({ message: "Route Failed" });
         }
     } else {
-        return response.status(400).json({ message: "Missing Data Fields" });
+        return response.status(400).json({ message: "All fields MUST be filled in." });
     }
 });
 
@@ -69,7 +69,7 @@ router.post('/api/login', (request, response) => {
 router.post('/api/logout', (request, response) => {
     request.session.destroy();
     var model = {
-        message: "you have been successfully logged out!"
+        message: "you have been successfully logged out! We suggest closing the window for security purposes."
     }
     response.render('login', model);
 });

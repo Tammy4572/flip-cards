@@ -31,7 +31,7 @@ router.post('/api/decks', (request, response) => {
     } else {
         return response.status(400).json({ message: "Incomplete Data "});
     }
-});``
+});
 
 router.post('/api/decks/:id', (request, response) => {
     var deckIndex = data.decks.findIndex(q => q.id === parseInt(request.params.id));
@@ -78,7 +78,7 @@ router.post('/api/decks/:id/update/:cardId', (request, response) => {
             return response.status(400).json({ message: "Incomplete Data" });
         }
     } else {
-        return response.status(400).json({ message: "Flip Card not found" });
+        return response.status(400).json({ message: "Card not found" });
     }
 });
 
@@ -106,7 +106,7 @@ router.post('/api/decks/:id/delete/:cardId', (request, response) => {
         return response.render('deck', currentDeck);
 
     } else {
-        return response.status(400).json({ message: "Flip Card not found" });
+        return response.status(400).json({ message: "Card not found" });
     }
 
 });
@@ -137,7 +137,7 @@ router.get('/api/decks/:id/start', (request, response) => {
         return response.render('card', model);
     } else {
         var model = {
-            errMessage: "No cards entered into this deck yet.",
+            errMessage: "No cards found.",
             data: data.decks
         }
         return response.render('dashboard', model)
@@ -161,7 +161,7 @@ router.post('/api/decks/:id/:cardId/correct', (request, response) => {
         fs.writeFile('data.json', itemsJSON);
         return response.render('card', modelStatus);
     } else {
-        return response.status(400).json({ message: "Flip Card not found" });
+        return response.status(400).json({ message: "Card not found" });
     }
 });
 
@@ -182,7 +182,7 @@ router.post('/api/decks/:id/:cardId/incorrect', (request, response) => {
         fs.writeFile('data.json', itemsJSON);
         return response.render('card', modelStatus);
     } else {
-        return response.status(400).json({ message: "Flip Card not found" });
+        return response.status(400).json({ message: "Card not found" });
     }
 });
 
